@@ -185,7 +185,7 @@ p{
 \*-----------------------------------*/
 
 .hero{
-    background-image: url("../img/hero4.png");
+    background-image: url("../img/home.jpg");
     height: 90vh;
     width: 100%;
     padding: 0 3rem;
@@ -281,9 +281,100 @@ p{
 }
 
 /*-----------------------------------*\
-    #ABOUT
+    #FEATUREd PRODUCTS
 \*-----------------------------------*/
 
+.featured-products{
+    text-align: center;
+    padding: 3rem 4rem;
+}
+.featured-products .container{
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.featured-products .product{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: .6rem;
+    width: 250px;
+    box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    position: relative;
+    border: #cce7d0 solid 1px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.featured-products .product:hover{
+    box-shadow: 10px 15px 50px rgba(70, 62, 221, 0.13);
+    border-color: #088178;
+}
+.featured-products .product img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: .4rem;
+}
+
+.product .description{
+    text-align: center;
+    padding: 10px 0;
+}
+.product .description span{
+    color: #8c8c91;
+    font-size: 1.3rem;
+}
+.product .description h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 1rem;
+}
+.product .description h5:hover{
+    color: var(--clr-text-hover);
+}
+.product .description .stars{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.product .description .stars i{
+    width: 15px;
+    margin: 0 3px;
+    color: #abaaaa;
+}
+
+.product .description h4{
+    color: #088178;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+.product .btn-cart{
+    padding: .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: .5rem;
+    background-color: var(--clr-btn);
+    width: 100%;
+    color: #fff;
+}
+.product .btn-cart p{
+    font-size: 14px;
+    margin: 0;
+    padding-top: 4px;
+}
+.product .btn-cart:hover{
+    background: #18a9a0;
+}
+.product .fa-shopping-cart{
+    font-size: 1rem;
+    border-radius: 50%;
+    font-weight: bold;
+}
 
 
 
