@@ -298,6 +298,7 @@ p{
 .featured-products .product{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 5px;
     padding: .6rem;
     width: 250px;
@@ -319,6 +320,9 @@ p{
 }
 
 .product .description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     padding: 10px 0;
 }
