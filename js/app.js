@@ -1,6 +1,7 @@
-import  {products}  from "./mockdata.js";
+import  {products,newArrivals}  from "./mockdata.js";
 
 const productsList = document.getElementById('products-list');
+const newArrivalsList = document.getElementById('new-arrivals-list');
 const cartList = document.getElementById('cart-list');
 
 {/* <div class="product">
@@ -46,4 +47,30 @@ const createProduct = (product) => {
 for (const product of products) {
     const productElement = createProduct(product);
     productsList.appendChild(productElement);
+}
+
+const createNewArrival = (product) => {
+    const productElement = document.createElement('div');
+    productElement.classList.add('product');
+    productElement.innerHTML = `
+        <img class="product-img" src="${product.image}" alt="producto de la tienda">
+        <div class="description">
+            <span>${product?.brand || ' '}</span>
+            <h5>${product.name}</h5>
+            <div class="stars">
+                ${product.stars}
+            </div>
+            <h4>$${product.price}</h4>
+            <div class="btn btn-cart">
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <p>Add to the cart</p>
+            </div>
+        </div>
+    `;
+    return productElement;
+}
+
+for (const product of newArrivals) {
+    const productElement = createNewArrival(product);
+    newArrivalsList.appendChild(productElement);
 }

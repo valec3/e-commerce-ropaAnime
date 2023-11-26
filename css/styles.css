@@ -157,6 +157,16 @@ p{
     gap: 1rem;
     font-weight: 400;
 }
+@media (max-width: 768px){
+    .navbar .list_links{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        flex-direction: column;
+    }
+}
+
 .navbar .list_links a{
     font-size: 1.15rem;
     font-weight: bold;
@@ -214,14 +224,22 @@ p{
     color: #847d7d;
 }
 .hero .container .btn{
+    display: inline-block;
     margin-top: 1rem;
-    background-image: url("../img/button.png") ;
-    background-repeat: no-repeat;
+    background: #18a9a0;
+    padding-inline: 2rem;
+    padding-block: 1rem .8rem;
+    color: #fff;
     border: 0;
-    padding: 14px 80px 14px 50px;
     font-size: 1rem;
     cursor: pointer;
     font-weight: bold;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.hero .container .btn:hover{
+    background: #088178;
 }
 
 /*-----------------------------------*\
@@ -291,17 +309,17 @@ p{
 .featured-products .container{
     padding: 2rem 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 2rem;
     flex-wrap: wrap;
 }
 .featured-products .product{
     display: flex;
     flex-direction: column;
+    width: 250px;
     justify-content: space-between;
     gap: 5px;
     padding: .6rem;
-    width: 250px;
     box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
     position: relative;
@@ -379,6 +397,90 @@ p{
     border-radius: 50%;
     font-weight: bold;
 }
+
+
+
+
+/*-----------------------------------*\
+    #BANNER
+\*-----------------------------------*/
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url(../img/banner/b2.jpg) no-repeat center center/cover;
+    height: 40vh;
+    color: #fff;
+}
+.banner h4{
+    font-size: 1.5rem;
+}
+.banner h2{
+    font-size: 3rem;
+    padding-block: 1.5rem;
+}
+.banner h2 span{
+    display: inline;
+    color: var(--clr-text-hover);
+}
+.banner .btn{
+    padding-inline: 2rem;
+    padding-block: 1rem .8rem;
+    color: #000;
+    background: #fff;
+    border-radius: .5rem;
+}
+.banner .btn:hover{
+    background: #18a9a0;
+    color: #fff;
+}
+
+
+/*-----------------------------------*\
+    #NEW ARRIVALS
+\*-----------------------------------*/
+
+.new-arrivals{
+    padding: 3rem 0;
+    text-align: center;
+}
+.new-arrivals h2{
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
+}
+
+.new-arrivals .container{
+    display: flex;
+    padding-block: 2rem;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.new-arrivals .product{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    justify-content: space-between;
+    gap: 5px;
+    padding: .6rem;
+    box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    position: relative;
+    border: #cce7d0 solid 1px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.new-arrivals .product:hover{
+    box-shadow: 10px 15px 50px rgba(70, 62, 221, 0.13);
+    border-color: #088178;
+}
+
+
+
+
 
 
 
