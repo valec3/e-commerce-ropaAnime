@@ -313,6 +313,11 @@ p{
     gap: 2rem;
     flex-wrap: wrap;
 }
+@media (max-width: 768px){
+    .featured-products .container{
+        justify-content: center;
+    }
+}
 .featured-products .product{
     display: flex;
     flex-direction: column;
@@ -444,7 +449,7 @@ p{
 \*-----------------------------------*/
 
 .new-arrivals{
-    padding: 3rem 0;
+    padding: 3rem 4rem;
     text-align: center;
 }
 .new-arrivals h2{
@@ -459,6 +464,12 @@ p{
     gap: 2rem;
     flex-wrap: wrap;
 }
+@media (max-width: 768px){
+    .new-arrivals .container{
+        justify-content: center;
+    }
+}
+
 .new-arrivals .product{
     display: flex;
     flex-direction: column;
@@ -478,7 +489,117 @@ p{
     border-color: #088178;
 }
 
+/*-----------------------------------*\
+    #BANNERS
+\*-----------------------------------*/
+.grid-banner :is(.banner-1, .banner-2){
+    padding: 2rem 3rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+@media (max-width: 1300px){
+    .grid-banner{
+        padding: 3rem 0;
+    }
+    .grid-banner :is(.banner-1, .banner-2){
+        justify-content: center;
+    }
+}
 
+.grid-banner .banner-box{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: center;
+    background: url(../img/banner/b17.jpg) no-repeat center center/cover;
+    height: 40vh;
+    flex:  1 1 568px;
+    color: #fff;
+    padding: 2rem;
+}
+.grid-banner .banner-box:nth-child(2){
+    background: url(../img/banner/b10.jpg) no-repeat center center/cover;
+}
+@media (min-width: 900px) and (max-width: 1300px){
+    .grid-banner .banner-1 .banner-box{
+        height: 50vh;
+    }
+    
+}
+
+.grid-banner .banner-box h4{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.grid-banner .banner-box h2{
+    font-size: 3rem;
+    padding-block: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.grid-banner .banner-box h2 span{
+    display: inline;
+    color: var(--clr-text-hover);
+}
+.grid-banner .banner-box .btn{
+    padding-inline: 2rem;
+    padding-block: 1rem .8rem;
+    color: #fff;
+    border-radius: .5rem;
+    border: 1px solid #fff;
+}
+.grid-banner .banner-box .btn:hover{
+    background: #ffffff;
+    color: #000000;
+}
+
+
+.grid-banner .banner-2 .banner-box{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: center;
+    background: url(../img/banner/b8.jpg) no-repeat center center/cover;
+    height: 30vh;
+    flex:  1 1 30%;
+    max-width: 400px;
+    color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+.grid-banner .banner-2 .banner-box:nth-child(1){
+    background: url(../img/banner/b7.jpg) no-repeat center center/cover;
+}
+.grid-banner .banner-2 .banner-box:nth-child(2){
+    background: url(../img/banner/b4.jpg) no-repeat center center/cover;
+}
+.grid-banner .banner-2 .banner-box:nth-child(3){
+    background: url(../img/banner/b19.jpg) no-repeat center center/cover;
+}
+
+.grid-banner .banner-2 .banner-box{
+    justify-content: flex-end;
+}
+
+.grid-banner .banner-2 .banner-box h2{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.grid-banner .banner-2 .banner-box h3 {
+    color: #ec544e;
+    font-size: 1rem;
+    font-weight: 800;
+}
 
 
 
@@ -504,3 +625,10 @@ p{
 /*-----------------------------------*\
     #MEDIA QUERIES
 \*-----------------------------------*/
+
+
+@media (max-width: 468px){
+    .container{
+        padding: 1rem;
+    }
+}
