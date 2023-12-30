@@ -157,15 +157,7 @@ p{
     gap: 1rem;
     font-weight: 400;
 }
-@media (max-width: 768px){
-    .navbar .list_links{
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        flex-direction: column;
-    }
-}
+
 
 .navbar .list_links a{
     font-size: 1.15rem;
@@ -316,6 +308,10 @@ p{
 @media (max-width: 768px){
     .featured-products .container{
         justify-content: center;
+        gap: 1rem;
+    }
+    .featured-products{
+        padding: 2rem 1rem;
     }
 }
 .featured-products .product{
@@ -467,6 +463,10 @@ p{
 @media (max-width: 768px){
     .new-arrivals .container{
         justify-content: center;
+        gap: 1rem;
+    }
+    .new-arrivals {
+        padding: 2rem 1rem;
     }
 }
 
@@ -619,6 +619,12 @@ p{
     justify-content: space-between;
     align-items: center;
 }
+@media (max-width: 468px){
+    .newsletter .container{
+        gap: 1rem;
+        flex-direction: column;
+    }
+}
 .newsletter h4{
     font-size: 2rem;
     font-weight: 700;
@@ -658,33 +664,169 @@ p{
 
 
 
-
-
-
-
-/*-----------------------------------*\
-    #WORK
-\*-----------------------------------*/
-
-
-
-
-
 /*-----------------------------------*\
     #FOOTER
 \*-----------------------------------*/
 
 
+.logo{
+    width: 3rem;
+}
 
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline: 4rem;
+    padding-block: 2rem;
+}
+.footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+.footer h4{
+    font-size: 1rem;
+    padding-bottom: 1.5rem;
+}
+.footer p{
+    font-size: .8rem;
+    padding: 0 0 8px 0;
+}
 
+.footer a{
+    font-size: .8rem;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.footer .follow i{
+    color: #465b52;
+    padding: 4px;
+    cursor: pointer;
+}
+.footer .install .row img{
+    border: 1px solid var(--clr-btn);
+    border-radius: 8px;
+}
+.footer .install img{
+    margin: 10px 0 15px 0;
+}
+.footer .follow i:hover,
+.footer a:hover{
+    color: var(--clr-btn);
+}
+
+.footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+.footer .copyright p{
+    justify-content: center;
+    display: flex;
+    gap: 7px;
+}
 
 /*-----------------------------------*\
     #MEDIA QUERIES
 \*-----------------------------------*/
 
 
+body {
+    overflow-x: hidden;
+}
 @media (max-width: 468px){
     .container{
         padding: 1rem;
+    }
+    .hero{
+        background-position: 75%;
+        padding: 5px;
+        overflow-x: hidden;
+    }
+    .header{
+        padding: 10px .5rem;
+    }
+    .hero h4{
+        font-size: 1.3rem;
+    }
+    .hero h2{
+        font-size: 1.2rem;
+    }
+    .hero h1{
+        font-size: 1.8rem;
+    }
+    section.feature{
+        padding: 2rem 1rem;
+    }
+    .feature .container .fe_box{
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+}
+.header .icons-header{
+    display: flex;
+    gap: 1rem;
+}
+
+.header .mobile-burger{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 16px;
+    cursor: pointer;
+    width: 1.2rem;
+}
+.header .mobile-burger span{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: #18a9a0;
+    height: 3px;
+    width: 100%;
+    transform-origin: left;
+    transition: all .3s ease;
+}
+.header .mobile-burger.show span:nth-child(2){
+    opacity: 0;
+}
+.header .mobile-burger.show span:nth-child(1){
+    transform:rotate(45deg);
+}
+.header .mobile-burger.show span:nth-child(3){
+    transform:rotate(-45deg);
+}
+
+@media (max-width: 768px){
+    .header{
+        max-width: 100vw;
+        width: 100vw;
+        
+    }
+    .hero{
+        background-position: 75%;
+    }
+    .navbar .list_links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        right: -230px;
+        width: 230px;
+        height: 100vh;
+        padding: 2rem 1rem;
+        background: #e3e6f3;
+        box-shadow: 0 40px 40px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        transition: all .3s ease;
+    }
+    .navbar .list_links.show{
+        right: 0;
+    }
+
+    .header .mobile-burger{
+        display: flex;
     }
 }

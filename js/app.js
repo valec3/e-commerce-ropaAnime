@@ -74,3 +74,10 @@ for (const product of newArrivals) {
     const productElement = createNewArrival(product);
     newArrivalsList.appendChild(productElement);
 }
+
+const iconBurger = document.getElementById('icon-burger');
+const menu = document.getElementById('menu-links');
+iconBurger.addEventListener('click', () => {
+    menu.classList.toggle('show');
+    iconBurger.classList.toggle('show');
+})
